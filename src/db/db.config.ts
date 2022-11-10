@@ -17,14 +17,14 @@ export default registerAs('typeOrmConfig', async () => {
     password: data.password,
     database: data.dbName,
     autoLoadEntities: true,
-    entities: [__dirname + '/**/*.entity{.ts,.js}'],
+    entities: [__dirname + '/../**/*.entity{.ts,.js}'],
     subscribers: [__dirname + '/../**/*.subscriber{.ts,.js}'],
     migrations: [__dirname + '/./migrations/*{.ts,.js}'],
     cli: {
       migrationsDir: __dirname + '/./migrations',
     },
     synchronize: process.env.DB_SYNC === "true",
-    logging: !!process.env.DB_LOGGING,
+    logging: true,
     pool: {
       max: 25,
       min: 1,
