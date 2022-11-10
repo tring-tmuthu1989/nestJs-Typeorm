@@ -23,7 +23,7 @@
     "create:migration": "npm run typeorm -- migration:create",
     "db:migrate": "npm run typeorm -- migration:run",
     "generate:migration": "npm run typeorm -- migration:generate",
-    "revert:migration": "npm run typeorm -- migration:revert"
+    "db:revert": "npm run typeorm -- migration:revert"
   },
   "dependencies": {
     "@nestjs/apollo": "^10.1.4",
